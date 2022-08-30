@@ -35,7 +35,7 @@ except importlib_metadata.PackageNotFoundError:
     # package is not installed
     pass
 
-VERSION = tuple(map(int, __version__.split('.')[:3]))
+VERSION = tuple(map(int, __version__.split('+')[0].split('.')[:3]))
 
 __all__ = ('Munch', 'munchify', 'DefaultMunch', 'DefaultFactoryMunch', 'RecursiveMunch', 'unmunchify')
 
